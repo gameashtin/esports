@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports News and Updates</title>
+    <style>
+        /* General Reset */
+
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li,
+        a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        header {
+            background: #1e1e1e;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+
+            width: 90px;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+            
+
+
+        }
+
+        header h1 {
+            color: #00d9ff;
+            font-size: 2rem;
+
+        }
+
+        .login-button {
+            position: absolute;
+            top: 30%;
+            right: 25px;
+            transform: translateY();
+            background: #00d9ff;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 0rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .login-button:hover {
+            background: #00b7e0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #1a1a1a;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: #1b9ab1;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            transform: scale(1.10);
+        }
+
+        .search-bar {
+            margin: 1rem auto;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            width: 80%;
+            max-width: 500px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .news-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .news-card {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card h2 {
+            font-size: 1.5rem;
+            margin: 1rem;
+        }
+
+        .news-card p {
+            margin: 0 1rem 1rem;
+            color: #cccccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1e1e1e;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: #00d9ff;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #00d9ff;
+            color: #121212;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .topleft {
+            position: absolute;
+            left: 10px;
+
+
+        }
+
+        button img {
+            width: 40px;
+
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+
+        }
+        .nitin{
+            border-radius: 100px;
+        }
+
+        button {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 10px;
+            width: 60px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        </div>
+
+        <div class="topleft">
+            <a
+                href="https://www.instagram.com/gameashtin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+
+                <button><img
+                        src="data:image/jpeg;base64,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"
+                        alt="">instagram</button>
+            </a>
+        </div>
+
+        <img class="nitin"  src="/esports/gameashtin.jpg" alt="">
+        <h1>Latest Esports News and Gaming Updates</h1>
+        <button class="login-button" onclick="requireLogin()">Login</button>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Tournaments</a>
+        <a href="#">Guides</a>
+        <a href="/esports/contact.html" target="_blank">Contact</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for news, updates, or guides... ">
+
+    </div>
+    <div class="container">
+        <section class="news-section">
+            <article class="news-card">
+                <a href="http://google.com">
+
+                    <img src="https://images7.alphacoders.com/109/1098639.jpg" alt="News 1">
+                    <h2>Latest Tournament Highlights</h2>
+                    <p>Catch up on the latest esports tournament action and results.</p>
+                </a>
+            </article>
+            <article class="news-card">
+                <img src="https://wallpaperaccess.com/full/11372666.png" alt="News 2">
+                <h2>Game Updates</h2>
+                <p>Discover the newest updates and patches in your favorite games.</p>
+            </article>
+            <article class="news-card">
+                <img src="https://staticg.sportskeeda.com/editor/2023/12/9690e-17039229769020-1920.jpg" alt="News 3">
+                <h2>Player Interviews</h2>
+                <p>Get insights from top esports players around the globe.</p>
+            </article>
+
+
+            <article class="news-card">
+                <a href="/esports/topgaminglaptop.html" target="_blank">
+                    <img src="https://th.bing.com/th/id/OIP.RJGKDaw9zA5BbRS0Ba7UrgHaEe?rs=1&pid=ImgDetMain" 
+                        alt="Gaming Laptops" >
+                    <h2>Top Gaming Laptops</h2>
+                    <p>Explore the best gaming laptops for performance and portability.</p>
+                </a>
+            </article>
+            <article class="news-card">
+                <img src="https://th.bing.com/th/id/OIP.w9mccj1x7qmh-MUlHojIXQHaEK?rs=1&pid=ImgDetMain" alt="Top Games">
+                <h2>Top Games to Play</h2>
+                <p>Check out the hottest games trending in the esports scene.</p>
+            </article>
+            <article class="news-card">
+                <img src="https://th.bing.com/th/id/OIP.OPIvt9goEIAcYxfqZOnVsQHaEK?rs=1&pid=ImgDetMain" alt="Top Games">
+                <h2>Top Gaming Mobile</h2>
+                <p>Best Gaming Mobile Phones according to budget in 2025.</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Esports News. All Rights Reserved.</p>
+        </footer>
+        <script>
+
+            // Search Bar Functionality
+            const searchInput = document.getElementById('search');
+            searchInput.addEventListener('input', (event) => {
+                const query = event.target.value.toLowerCase();
+                const newsCards = document.querySelectorAll('.news-card');
+                newsCards.forEach(card => {
+                    const title = card.querySelector('h2').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    if (title.includes(query) || description.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Login Requirement
+            function requireLogin() {
+                const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+                if (!isLoggedIn) {
+                    const userResponse = confirm('You must log in to continue. Redirect to login page?');
+                    if (userResponse) {
+                        // Redirect to a login page (replace "login.html" with your login page URL)
+                        window.location.href = 'login.html';
+                    }
+                }
+            }
+
+
+        </script>
+</body>
+
+</html>
