@@ -87,7 +87,7 @@
 
         nav a:hover {
             text-decoration: underline;
-            transform: scale(1.10);
+            transform: scale(1.05);
         }
 
         .search-bar {
@@ -186,7 +186,11 @@
         .nitin{
             border-radius: 100px;
         }
-
+        .active
+        {
+            text-decoration:underline;
+            color: rgb(6, 250, 246);
+        }
         button {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: bold;
@@ -224,11 +228,13 @@
         <img class="nitin"  src="/esports/gameashtin.jpg" alt="">
         <h1>Latest Esports News and Gaming Updates</h1>
         <button class="login-button" onclick="requireLogin()">Login</button>
+        
+        
     </header>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">News</a>
+        <a href="#" class="active">Home</a>
+        <a href="/esports/news.html">News</a>
         <a href="#">Tournaments</a>
         <a href="#">Guides</a>
         <a href="/esports/contact.html" target="_blank">Contact</a>
@@ -280,7 +286,7 @@
         </section>
 
         <footer>
-            <p>&copy; 2025 Esports News. All Rights Reserved.</p>
+            <p>2025 Esports News Gameashtin Home Page</p>
         </footer>
         <script>
 
